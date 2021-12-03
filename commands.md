@@ -11,3 +11,4 @@
 
   - vendor/bin/phinx seed:create NameDaSeed
   - vendor/bin/phinx seed:run
+  - vendor/bin/phinx seed:run -s OBS: especifica
