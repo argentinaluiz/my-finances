@@ -1,0 +1,17 @@
+{
+    "name": "marco/my-finances",
+    "autoload": {
+        "psr-4": {
+            "SONFin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marco-25",
+            "email": "marco.antonio-25@outlook.com.br"
+        }
+    ],
+    "require": {
+        "robmorgan/phinx": "0.7.1"
+    }
+}
