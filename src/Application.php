@@ -15,7 +15,7 @@ class Application
 
   public function service ($name)
   {
-    $this->_serviceContainer->get($name);
+    return $this->_serviceContainer->get($name);
   }
 
   public function addService (string $name, $service): void
@@ -34,6 +34,7 @@ class Application
 
   public function get ($path, $action, $name = null): Application
   {
+    /** @var \Aura\Router\Map */
     $routing = $this->service('routing');
     $routing->get($name, $path, $action);
     return $this;
@@ -41,6 +42,7 @@ class Application
 
   public function start ()
   {
+    /** @var \Aura\Router\Route */
     $route = $this->service('route');
     $callable = $route->handler;
     $callable();
